@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco Fortuna</title>
     <style>
+        
         /* Adicione estilos conforme necessário */
     </style>
     <link rel="stylesheet" href="style.css">
@@ -18,9 +19,36 @@
     </header>
 
     <!-- Links para outras páginas (se preferir, você pode esconder esses botões) -->
-    <a href="entrar.html">
-        <button id="entr">Entrar</button>
-    </a>
+    
+        <form id="loginForm">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="button" onclick="verificarLogin()" id="entr">Entrar</button>
+        </form>
+    
+        <script>
+            function verificarLogin() {
+                // Valores de usuário e senha predefinidos (substitua com seus dados reais)
+               
+                var senhaCorreta = "123456789";
+    
+                // Obter valores do formulário
+               
+                var senhaDigitada = document.getElementById('password').value;
+    
+                // Verificar se os valores digitados são corretos
+                if (senhaDigitada === senhaCorreta) {
+                    alert("Login bem-sucedido!");
+                    window.location.href = 'entrar.html';
+                   
+                    // Aqui você pode redirecionar para a página principal, por exemplo.
+                } else {
+                    alert("Usuário ou senha incorretos. Tente novamente.");
+                }
+            }
+        </script>
+    
     <br>
     <a href="trocardeconta.html">
         <button id="roct">Trocar de Conta</button>

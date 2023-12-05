@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Login</title>
+</head>
+<body>
+
+    <h2>Verificação de Login</h2>
+
+    <form id="loginForm">
+        
+        
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="verificarLogin()">Entrar</button>
+    </form>
+
+    <script>
+        function verificarLogin() {
+            // Valores de usuário e senha predefinidos (substitua com seus dados reais)
+           
+            var senhaCorreta = "123456789";
+
+            // Obter valores do formulário
+           
+            var senhaDigitada = document.getElementById('password').value;
+
+            // Verificar se os valores digitados são corretos
+            if (senhaDigitada === senhaCorreta) {
+                alert("Login bem-sucedido!");
+                // Aqui você pode redirecionar para a página principal, por exemplo.
+            } else {
+                alert("Usuário ou senha incorretos. Tente novamente.");
+            }
+        }
+    </script>
+
+</body>
+</html>
